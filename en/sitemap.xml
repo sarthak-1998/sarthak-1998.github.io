@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://kaendagger.github.io/categories/</loc>
+    <lastmod>2019-07-11T14:04:27+05:30</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://kaendagger.github.io/fr/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://kaendagger.github.io/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://kaendagger.github.io/</loc>
+    <lastmod>2019-07-11T14:04:27+05:30</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://kaendagger.github.io/fr/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://kaendagger.github.io/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://kaendagger.github.io/categories/kotlin/</loc>
+    <lastmod>2019-07-11T14:04:27+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kaendagger.github.io/posts/</loc>
+    <lastmod>2019-07-11T14:04:27+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kaendagger.github.io/posts/2019/07/tail-call-optimization-in-kotlin/</loc>
+    <lastmod>2019-07-11T14:04:27+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kaendagger.github.io/categories/android/</loc>
+    <lastmod>2019-06-08T14:04:27+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kaendagger.github.io/posts/2019/06/changes-in-android-runtime/</loc>
+    <lastmod>2019-06-08T14:04:27+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://kaendagger.github.io/about/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaendagger.github.io/sessions/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://kaendagger.github.io/tags/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://kaendagger.github.io/fr/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://kaendagger.github.io/tags/"
+                />
+  </url>
+  
+</urlset>

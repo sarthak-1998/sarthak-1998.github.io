@@ -1,0 +1,149 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Posts on KaenSpace</title>
+        <link>https://kaendagger.github.io/posts/</link>
+        <description>Recent content in Posts on KaenSpace</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+        <lastBuildDate>Thu, 11 Jul 2019 14:04:27 +0530</lastBuildDate>
+        <atom:link href="https://kaendagger.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+        
+        <item>
+            <title>Tail Call Optimization in Kotlin</title>
+            <link>https://kaendagger.github.io/posts/2019/07/tail-call-optimization-in-kotlin/</link>
+            <pubDate>Thu, 11 Jul 2019 14:04:27 +0530</pubDate>
+            
+            <guid>https://kaendagger.github.io/posts/2019/07/tail-call-optimization-in-kotlin/</guid>
+            <description>Before understanding Tail Call Optimization. Lets get a brief about “Function Call Stack” and “Recursion”
+Function Call Stack When ever Java Application starts, a process starts in which our application (main thread) works. With this, Stack is maintained for the function calls. This stack contains Stack Frame which stores data of local variable to that frame.
+For example, consider this sample program with three functions.
+Sample Java Program
+When the program starts firstly main() is called.</description>
+            <content type="html"><![CDATA[<p>Before understanding Tail Call Optimization. Lets get a brief about “Function Call Stack” and “Recursion”</p>
+<h3 id="function-call-stack">Function Call Stack</h3>
+<p>When ever Java Application starts, a process starts in which our application (main thread) works. With this, Stack is maintained for the function calls. This stack contains Stack Frame which stores data of local variable to that frame.</p>
+<p>For example, consider this sample program with three functions.</p>
+<p><img src="/images/tco-kotlin/sample_java.png" alt="Sample">
+<em>Sample Java Program</em></p>
+<p>When the program starts firstly main() is called. So it gets push to stack. Then in main(), we have called fun1(), so fun1() is pushed to stack over main(). In fun1(), fun2() is called so fun2() is also pushed to stack. And lastly fun3() is pushed.</p>
+<p>Order of execution : main()-&gt;fun1()-&gt;fun2()-&gt;fun3()</p>
+<p><img src="/images/tco-kotlin/funCS.png" alt="funcs">
+<em>Function call stack formed. fun3() currently in execution</em></p>
+<blockquote>
+<p>Reason being function call stack maintained is that when the function finishes execution, program would get to know what to execute next, which is possible due to Function Call Stack. Considering our example when fun3() finishes execution it is popped out of stack and start executing from point after the fun3() was called from fun2().</p>
+</blockquote>
+<h3 id="recursion">Recursion</h3>
+<p>Simply speaking when a function calls itself its called Recursion. Again lets see the example of this and see the function stack formed.</p>
+<p>This a simple Factorial program</p>
+<p><img src="/images/tco-kotlin/factorialkt.png" alt="factorialkt">
+<em>factorial.kt</em></p>
+<p>Here factorial() calls itself again and again until value of num = 0. Now Lets see the function call stack formed for calculating 10! (10 factorial).</p>
+<p><img src="/images/tco-kotlin/factorial10.png" alt="factorial10">
+<em>Factorial Function stack formed 10!</em></p>
+<p>For calculating 10! , when num reaches 0 , 11 stack frames are created. These frames contains data of variable local to function. <strong>Hence each frame consumes memory. This is some problem with recursion. Though recursion let us write code easily, but this a problem too.</strong></p>
+<h3 id="enter-the-tail-call-optimization">Enter the Tail Call Optimization!!</h3>
+<p>Now Tail call optimization is way in which “For recursive calls to function No New Stack Frame is Allocated.”</p>
+<p>But How ???</p>
+<p>As explained earlier function stack is maintained so program knows what to execute next . Considering the example of Factorial program above, reason function call stack was maintained because even after the execution of recursive call to factorial, there was some work left to do. That was</p>
+<blockquote>
+<p>num*result of recursive factorial()</p>
+</blockquote>
+<p>Program was supposed to multiply the result of recursive factorial() call, hence function call stack is maintained.</p>
+<h4 id="tail-call-optimized-way">Tail call Optimized Way</h4>
+<p><img src="/images/tco-kotlin/optifacti.png" alt="optifacti">
+<em>OptiFactorial.kt</em></p>
+<blockquote>
+<p>Notice here this time , we are simply returning result of recursive call to optiFactorial(). And computing the factorial value on the go,.</p>
+</blockquote>
+<blockquote>
+<p>Since now we are not evaluating any value after execution of recursive call, so there is nothing left to do after evaluating the result of recursive call. And since there is nothing left to do . So no Stack is maintained , No allocation to new Stack Frame.</p>
+</blockquote>
+<p>So the result is unlike the previous program No new stack frame should be allocated to recursive calls.</p>
+<p>Lets see the Function call stack.</p>
+<p><img src="/images/tco-kotlin/optifactistack.png" alt="optifactistack">
+<em>optiFactorial Function stack</em></p>
+<p>Wait!! optiFactorial() is supposed to be Tail Call optimized way, so it shouldn’t create new Stack Frames. Then Why???</p>
+<p>Reason is</p>
+<blockquote>
+<p>JVM doesn’t support Tail Call Optimization</p>
+</blockquote>
+<p>But there’s a good reason for this too. JVM doesn’t support Tail Call Optimization for Security Purposes. JVM maintains the whole Stack so that we get to know which function was called from which function. A good example would be Stack Trace which we get when a Exception occurs. This Stack Trace helps us too see at which point exception was thrown in function and shows the whole order of functions at point of Exception.</p>
+<h4 id="enter-the-kotlins-tailrec">Enter the Kotlin’s tailRec</h4>
+<blockquote>
+<p>tailRec is a keyword in Kotlin which helps Tail Call Optimized Recursive functions to run in Tail Call Optimized way in JVM</p>
+</blockquote>
+<p><img src="/images/tco-kotlin/optifactitailrec.png" alt="optifactitailrec">
+<em>optiFactorial with TailRec</em></p>
+<p>Notice the tailRec keyword. Now lets see the function call stack.</p>
+<p><img src="/images/tco-kotlin/funCSTR.png" alt="funCSTR">
+<em>Function Stack After TailRec</em></p>
+<p>Yayyyyyy!!! Now finally our Tail call optimized function is working as intended.</p>
+<h3 id="is-tailrec-magic--what-does-it-do-">is tailRec magic ? What does it do ?</h3>
+<p><strong>One thing to understand is that Kotlin is no magic., its syntactical sugar.</strong></p>
+<p>Lets see the kotlin bytecode and see the output after decompiling.</p>
+<p>In IntelliJ or Android Studio : Go to Tools-&gt;Kotlin-&gt;Show Kotlin ByteCode</p>
+<p>This will generate Kotlin ByteCode. There would be option of “Decompile”. Just Decompile it to see in a readable way.</p>
+<p><img src="/images/tco-kotlin/TRBC.png" alt="TRBC">
+<em>tailRec optiFactorial() decompiled bytcode</em></p>
+<p>As we can see with tailRec keyword. Kotlin compiler just converts the Tail Call Optimized function to iterative way. Hence no new stack frame is created.</p>
+<blockquote>
+<p>With tailRec keyword, you can write the function in Tail Call optimized way, but internally it converts it to iterative function and runs the iterative().</p>
+</blockquote>
+<h4 id="why-not-iterative-functions-then-">Why Not Iterative functions then ?</h4>
+<p>Iterative functions are not easy to write and understand all the time. as compared to Recursive functions. Simple and good example could be QuickSort.</p>
+]]></content>
+        </item>
+        
+        <item>
+            <title>Changes in Android Runtime</title>
+            <link>https://kaendagger.github.io/posts/2019/06/changes-in-android-runtime/</link>
+            <pubDate>Sat, 08 Jun 2019 14:04:27 +0530</pubDate>
+            
+            <guid>https://kaendagger.github.io/posts/2019/06/changes-in-android-runtime/</guid>
+            <description>Hey guys , Android has been around ten years and since then Google introduced many things in android , improved , changed and so on. So with the Runtime in Android.
+In this post , I will tell about how the runtime environment in android changed among the android verisons. Before we began , lets know about JIT and AOT
+JIT (Just in Time) — Its the compilation of code on the fly (Just in time) i.</description>
+            <content type="html"><![CDATA[<p>Hey  guys , Android has been around ten years and since then Google introduced many things in android , improved , changed and so on. So with the Runtime in Android.</p>
+<p>In this post , I will tell about how the runtime environment in android changed among the android verisons.
+Before we began , lets know about JIT and AOT</p>
+<p><strong>JIT (Just in Time)</strong> — Its the compilation of code on the fly (Just in time) i.e dynamically your code is converted Into native code. JIT converts selective part of code as and when it’s required.</p>
+<p><strong>AOT(Ahead of time)</strong> — Ahead of time compilation, before executing your app, it converts your code to native code , so that machine (android device) can execute it natively .</p>
+<p><strong>DEX files</strong> — DEX files are Dalvik excecutables which actually runs on your device .Our Source Code , Resource along with library dependencies is compiled into DEX file (contains DEX bytecode which android device runs) . And then it is zipped into APK.</p>
+<p><img src="/images/changes-android-runtime/cart-build-process.png" alt="Build Process">
+<em>Build Process</em></p>
+<h3 id="dalvik-and-art">Dalvik and ART</h3>
+<p>Dalvik and ART are runtime system used in andoid. Dalvik was runtime prior Lollipop and ART is runtime from Lollipop to present version. Though in Kitkat , ART was introduced but it has to be turned on from developer options i.e it was introduced for experimental basis.</p>
+<h3 id="dalvik--jit--from-froyo-to-kitkat">Dalvik + JIT ( From Froyo to KitKat)</h3>
+<p>Dalvik is the virtual machine optimized for mobile devices .</p>
+<p>On Installation</p>
+<p><img src="/images/changes-android-runtime/dalvikruntime.png" alt="DalvikRuntime">
+<em>Dalvik Runtime</em></p>
+<p>Dex file is converted to <strong>odex file</strong> ( which is Optimized Dex file) by dexOpt process. This odex file runs on android’s Dalvik VM to play your app. Plus more frequently part of your app (Hot code) is converted to <strong>native code dynamically (on the fly) so that , app can perform better.</strong></p>
+<h2 id="enter-the-art-android-runtime">Enter the ART (Android Runtime)</h2>
+<h3 id="aot-ahead-of-time-compilation-from-lollipop-to-marshmallow">AOT (Ahead of time compilation) (From Lollipop to Marshmallow)</h3>
+<p>In the ART with AOT , <strong>during the installation period ,app’s whole code is converted to native code</strong>. So that app can execute app natively.</p>
+<p><img src="/images/changes-android-runtime/artaot.png" alt="artaot">
+<em>ART with AOT only</em></p>
+<p>Dex file is converted <strong>oat file</strong> which is <strong>binary for AOT (native code)</strong> through dex2oat process. This oat file runs directly on device. This is better than Dalvik+ JIT as here app runs natively while latter interprets odex file each time to play the app.</p>
+<p>But there some problems too &hellip;
+as the whole code is converted to native code app’s size becomes large . And as the code is converted to native code during installation , installation period increases.
+Users don’t use all the app features all the time. There is always a certain part that users use mostly.
+But with AOT all code (even the less frequent acces part) is converted to oat file and takes the space on device.</p>
+<!-- raw HTML omitted -->
+<h3 id="aotjit-nougat-">AOT+JIT( Nougat +)</h3>
+<p>To solve the problem of increasing app’s size on device . Google brought JIT back to rescue plus this it includes profiling.
+When dex file is loaded, if oat file is included then ART runs it directly and if no oat file then cold code(Not frequent access code) is run by interpreter and Hot code by JIT.</p>
+<p><img src="/images/changes-android-runtime/jitarch.png" alt="jitarch">
+<em>Jit Architecture</em></p>
+<p>On first installation , there is no oat file generated . So here the app is run with JIT (converts the Hot code in background thread) which now also <strong>profiles the code (logs the Hot code)</strong>.</p>
+<p><img src="/images/changes-android-runtime/ART.png" alt="art">
+<em>AOT + JIT</em></p>
+<p><strong>Compilation daemon service</strong> (Background service) which starts AOT. AOT takes the profiled log and then convert your Hot code (Most frequent part) into native code (creates the oat file) in background. This service runs when your phone is idle or in charging state to save the battery power.
+Here the advantage is the part of your app mostly used is already in native code — executes natively and less used part is in JIT mode — cold code is run by interpreter and hot code is converted to native for that time (for that instance) only. Hence less space size on android device plus for your app’s most used part get performance and for even the less used part JIT compensates for that .</p>
+<p>Well that’s how the current runtime in android (AOT + JIT) and that’s it.I hope you liked the post.</p>
+<p>Sayonara!!</p>
+]]></content>
+        </item>
+        
+    </channel>
+</rss>

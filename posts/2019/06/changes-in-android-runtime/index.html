@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="map[name:Rohan Maity]">
+<meta name="description" content="Hey guys , Android has been around ten years and since then Google introduced many things in android , improved , changed and so on. So with the Runtime in Android.
+In this post , I will tell about how the runtime environment in android changed among the android verisons. Before we began , lets know about JIT and AOT
+JIT (Just in Time) — Its the compilation of code on the fly (Just in time) i." />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="#252627" />
+<link rel="canonical" href="https://kaendagger.github.io/posts/2019/06/changes-in-android-runtime/" />
+
+
+    <title>
+        
+            Changes in Android Runtime :: KaenSpace  — Rohan Maity&#39;s Space
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="https://kaendagger.github.io/main.min.7bfbbe12786fa0ded4b4c0d792cbb36a5bd0bdb0b856dde57aa7b1f6fe0f2b87.css">
+
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="https://kaendagger.github.io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://kaendagger.github.io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://kaendagger.github.io/favicon-16x16.png">
+    <link rel="manifest" href="https://kaendagger.github.io/site.webmanifest">
+    <link rel="mask-icon" href="https://kaendagger.github.io/safari-pinned-tab.svg" color="#252627">
+    <link rel="shortcut icon" href="https://kaendagger.github.io/favicon.ico">
+    <meta name="msapplication-TileColor" content="#252627">
+    <meta name="theme-color" content="#252627">
+
+<meta itemprop="name" content="Changes in Android Runtime">
+<meta itemprop="description" content="Hey guys , Android has been around ten years and since then Google introduced many things in android , improved , changed and so on. So with the Runtime in Android.
+In this post , I will tell about how the runtime environment in android changed among the android verisons. Before we began , lets know about JIT and AOT
+JIT (Just in Time) — Its the compilation of code on the fly (Just in time) i.">
+<meta itemprop="datePublished" content="2019-06-08T14:04:27&#43;05:30" />
+<meta itemprop="dateModified" content="2019-06-08T14:04:27&#43;05:30" />
+<meta itemprop="wordCount" content="706">
+<meta itemprop="image" content="https://kaendagger.github.io/"/>
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://kaendagger.github.io/"/>
+
+<meta name="twitter:title" content="Changes in Android Runtime"/>
+<meta name="twitter:description" content="Hey guys , Android has been around ten years and since then Google introduced many things in android , improved , changed and so on. So with the Runtime in Android.
+In this post , I will tell about how the runtime environment in android changed among the android verisons. Before we began , lets know about JIT and AOT
+JIT (Just in Time) — Its the compilation of code on the fly (Just in time) i."/>
+
+
+
+    <meta property="article:section" content="Android" />
+
+
+
+    <meta property="article:published_time" content="2019-06-08 14:04:27 &#43;0530 IST" />
+
+
+
+
+
+
+
+
+    </head>
+
+    <body class="">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="https://kaendagger.github.io/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">$ cd /home/</span>
+            <span class="logo__cursor" style=""></span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="https://kaendagger.github.io/about/">About me</a></li><li><a href="https://kaendagger.github.io/posts/">Posts</a></li><li><a href="https://kaendagger.github.io/sessions/">Sessions</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle unselectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>4 minutes
+
+            
+
+            </p>
+        </div>
+
+        <article>
+            <h1 class="post-title">
+                <a href="https://kaendagger.github.io/posts/2019/06/changes-in-android-runtime/">Changes in Android Runtime</a>
+            </h1>
+
+            
+
+            <div class="post-content">
+                <p>Hey  guys , Android has been around ten years and since then Google introduced many things in android , improved , changed and so on. So with the Runtime in Android.</p>
+<p>In this post , I will tell about how the runtime environment in android changed among the android verisons.
+Before we began , lets know about JIT and AOT</p>
+<p><strong>JIT (Just in Time)</strong> — Its the compilation of code on the fly (Just in time) i.e dynamically your code is converted Into native code. JIT converts selective part of code as and when it’s required.</p>
+<p><strong>AOT(Ahead of time)</strong> — Ahead of time compilation, before executing your app, it converts your code to native code , so that machine (android device) can execute it natively .</p>
+<p><strong>DEX files</strong> — DEX files are Dalvik excecutables which actually runs on your device .Our Source Code , Resource along with library dependencies is compiled into DEX file (contains DEX bytecode which android device runs) . And then it is zipped into APK.</p>
+<p><img src="https://kaendagger.github.io/images/changes-android-runtime/cart-build-process.png" alt="Build Process">
+<em>Build Process</em></p>
+<h3 id="dalvik-and-art">Dalvik and ART</h3>
+<p>Dalvik and ART are runtime system used in andoid. Dalvik was runtime prior Lollipop and ART is runtime from Lollipop to present version. Though in Kitkat , ART was introduced but it has to be turned on from developer options i.e it was introduced for experimental basis.</p>
+<h3 id="dalvik--jit--from-froyo-to-kitkat">Dalvik + JIT ( From Froyo to KitKat)</h3>
+<p>Dalvik is the virtual machine optimized for mobile devices .</p>
+<p>On Installation</p>
+<p><img src="https://kaendagger.github.io/images/changes-android-runtime/dalvikruntime.png" alt="DalvikRuntime">
+<em>Dalvik Runtime</em></p>
+<p>Dex file is converted to <strong>odex file</strong> ( which is Optimized Dex file) by dexOpt process. This odex file runs on android’s Dalvik VM to play your app. Plus more frequently part of your app (Hot code) is converted to <strong>native code dynamically (on the fly) so that , app can perform better.</strong></p>
+<h2 id="enter-the-art-android-runtime">Enter the ART (Android Runtime)</h2>
+<h3 id="aot-ahead-of-time-compilation-from-lollipop-to-marshmallow">AOT (Ahead of time compilation) (From Lollipop to Marshmallow)</h3>
+<p>In the ART with AOT , <strong>during the installation period ,app’s whole code is converted to native code</strong>. So that app can execute app natively.</p>
+<p><img src="https://kaendagger.github.io/images/changes-android-runtime/artaot.png" alt="artaot">
+<em>ART with AOT only</em></p>
+<p>Dex file is converted <strong>oat file</strong> which is <strong>binary for AOT (native code)</strong> through dex2oat process. This oat file runs directly on device. This is better than Dalvik+ JIT as here app runs natively while latter interprets odex file each time to play the app.</p>
+<p>But there some problems too &hellip;
+as the whole code is converted to native code app’s size becomes large . And as the code is converted to native code during installation , installation period increases.
+Users don’t use all the app features all the time. There is always a certain part that users use mostly.
+But with AOT all code (even the less frequent acces part) is converted to oat file and takes the space on device.</p>
+<!-- raw HTML omitted -->
+<h3 id="aotjit-nougat-">AOT+JIT( Nougat +)</h3>
+<p>To solve the problem of increasing app’s size on device . Google brought JIT back to rescue plus this it includes profiling.
+When dex file is loaded, if oat file is included then ART runs it directly and if no oat file then cold code(Not frequent access code) is run by interpreter and Hot code by JIT.</p>
+<p><img src="https://kaendagger.github.io/images/changes-android-runtime/jitarch.png" alt="jitarch">
+<em>Jit Architecture</em></p>
+<p>On first installation , there is no oat file generated . So here the app is run with JIT (converts the Hot code in background thread) which now also <strong>profiles the code (logs the Hot code)</strong>.</p>
+<p><img src="https://kaendagger.github.io/images/changes-android-runtime/ART.png" alt="art">
+<em>AOT + JIT</em></p>
+<p><strong>Compilation daemon service</strong> (Background service) which starts AOT. AOT takes the profiled log and then convert your Hot code (Most frequent part) into native code (creates the oat file) in background. This service runs when your phone is idle or in charging state to save the battery power.
+Here the advantage is the part of your app mostly used is already in native code — executes natively and less used part is in JIT mode — cold code is run by interpreter and hot code is converted to native for that time (for that instance) only. Hence less space size on android device plus for your app’s most used part get performance and for even the less used part JIT compensates for that .</p>
+<p>Well that’s how the current runtime in android (AOT + JIT) and that’s it.I hope you liked the post.</p>
+<p>Sayonara!!</p>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>706 Words</p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-06-08 14:04 &#43;0530</p>
+        </div>
+
+        
+            <div class="pagination">
+                <div class="pagination__title">
+                    <span class="pagination__title-h"></span>
+                    <hr />
+                </div>
+
+                <div class="pagination__buttons">
+                    
+                        <span class="button previous">
+                            <a href="https://kaendagger.github.io/posts/2019/07/tail-call-optimization-in-kotlin/">
+                                <span class="button__icon">←</span>
+                                <span class="button__text">Tail Call Optimization in Kotlin</span>
+                            </a>
+                        </span>
+                    
+
+                    
+                </div>
+            </div>
+        
+
+        
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2020</span>
+            
+                <span><a href="https://kaendagger.github.io/">Rohan Maity</a></span>
+            
+            <span><a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></span>
+            <span> <a href="https://kaendagger.github.io/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
+            <span>Made with &#10084; by <a href="https://github.com/rhazdon">rhazdon</a></span>
+        </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+<script type="text/javascript" src="https://kaendagger.github.io/bundle.min.2d5469329143160ae2456a69c3c76dc2d0a3b212b46afe291a51bd68650ed6f8697e001dab54f1c272c77ce08092a8c55e5bb4314e0ee334aab4b927ec896638.js" integrity="sha512-LVRpMpFDFgriRWppw8dtwtCjshK0av4pGlG9aGUO1vhpfgAdq1TxwnLHfOCAkqjFXlu0MU4O4zSqtLkn7IlmOA=="></script>
+
+
+
+    </body>
+</html>
