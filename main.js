@@ -7,7 +7,7 @@ const scrollAndResizeHandler = (e) => {
     document.getElementById('navbar2').classList.add('shown');
   }
   if (document.documentElement.clientWidth < 560) {
-    document.querySelectorAll('nav ul li').forEach(e => (e.classList.remove('selected')));
+    document.querySelectorAll('nav ul li' , 'nav2 ul li').forEach(e => (e.classList.remove('selected')));
     return;
   }
   if (document.body.scrollTop > window.innerHeight * 0.95 || document.documentElement.scrollTop > window.innerHeight * 0.95) {
@@ -30,7 +30,7 @@ const setSelectedNavLink = () => {
   }));
   sectionScrolls.sort((a, b) => b.visible - a.visible);
   console.log(JSON.stringify(sectionScrolls));
-  document.querySelectorAll('nav ul li').forEach(e => (e.classList.remove('selected')));
+  document.querySelectorAll('nav ul li' , 'nav2 ul li').forEach(e => (e.classList.remove('selected')));
   document.getElementById(`${sectionScrolls[0].name}Link`).classList.add('selected');
 }
 
@@ -40,15 +40,15 @@ window.addEventListener('resize', scrollAndResizeHandler);
 document.getElementsByClassName('nav-icon')[0].addEventListener('click', e => {
   document.getElementsByClassName('nav-icon')[0].classList.toggle('open');
   document.getElementById('navbar').classList.toggle('shown');
-  //document.getElementById('navbar2').classList.toggle('shown');
+  document.getElementById('navbar2').classList.toggle('shown');
 });
 
-document.querySelectorAll('nav ul li').forEach(el => 
+document.querySelectorAll('nav ul li' , 'nav2 ul li').forEach(el => 
   el.addEventListener('click', function(e){
   if(document.documentElement.clientWidth < 560) {
     document.getElementsByClassName('nav-icon')[0].classList.remove('open');
     document.getElementById('navbar').classList.remove('shown');
-    //document.getElementById('navbar2').classList.remove('shown');
+    document.getElementById('navbar2').classList.remove('shown');
   }
 }));
 
