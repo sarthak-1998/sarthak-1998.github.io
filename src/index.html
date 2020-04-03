@@ -12,8 +12,41 @@
     <meta property="og:image" content="https://avatars2.githubusercontent.com/u/41904293/">
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" type="image/png" href="./assets/favicon.png">
-    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
   </head>
+  <style>
+    * {box-sizing: border-box;}
+    
+    input[type=text], select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+    }
+    
+    input[type=submit] {
+      background-color: #373737;
+      color: white;
+      padding: 12px 20px;
+      border: 3px #fff solid;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    input[type=submit]:hover {
+      background-color: #1a87ee;
+    }
+    
+    .form {
+      border-radius: 5px;
+      background:#fafafa; 
+      padding: 20px;
+    }
+    </style>
+
   <body>
     <div class="container">
       <header class="col-full">
@@ -109,7 +142,7 @@
         </nav>
         <nav id="navbar2" class = "shown">  
           <ul>
-            <li id="introductionLink"><a href="javascript:history.go(0)">> $ cd /home/
+            <li id="introductionLink" style="margin-right: 40%;" ><a href="javascript:history.go(0)">> $ cd /home/
               <span id="logo__cursor" style = "
               width: 10px;
               height: 1rem ;
@@ -118,9 +151,8 @@
               border-radius: 1px;
               display: inline-block;" !important> </span>
          </a></li>
-            <li id="educationLink"> </li>
-            <li id="projectsLink"> </li>
-            <li id="ExtraLink"> </li>
+           
+            
             <li id="resumeLink"><a href="assets/Sarthak_Resume_U.pdf" href="{{.}}" target="_blank">View Resumé (PDF) </a></li>
           </ul>
         </nav>
@@ -223,7 +255,7 @@
           </div>
           <div class="flex-container">
             <div class="flex-media-logo">
-              <img src="./assets/air.png">
+              <img src="https://upload.wikimedia.org/wikipedia/en/thumb/5/51/Logo_of_AIR.svg/1200px-Logo_of_AIR.svg.png">
             </div>
             <div class="flex-title">
               <h3>Web Developer Intern
@@ -269,7 +301,7 @@
           <h2>Education</h2>
           <div class="flex-container">
             <div class="flex-media-logo">
-              <img src="./assets/ipu.png">
+              <img src="https://upload.wikimedia.org/wikipedia/en/b/b8/GGSIU_logo.svg">
             </div>
             <div class="flex-title">
               <h3>B.Tech - Computer Science and Engineering
@@ -279,11 +311,11 @@
             </div>
           </div>
           <div class="content-left-offset">
-            <p>I studied various core concepts of computer science, such as algorithms, network architecture, programming languages and artificial intelligence. During this time, I learnt to code in C++, Java, Python, C#, HTML, CSS and JavaScript along with developing various projects and applications, oftentimes integrating SQL databases.</p>
+            <p>I studied various core concepts of computer science, such as algorithms, network architecture, programming languages and artificial intelligence. During this time, I learnt to code in C++, Java, Python, C#, HTML, CSS and JavaScript along with developing various projects and applications, integrating SQL databases.</p>
           </div>
           <div class="flex-container">
             <div class="flex-media-logo">
-              <img src="./assets/kv.png">
+              <img src="https://kvsangathan.nic.in/sites/all/themes/kvs/logo.png">
             </div>
             <div class="flex-title">
               <h3>Senior Secondary Education- 12th (CBSE)
@@ -537,39 +569,7 @@
           <br> <br>
 
 
-          <style>
-            * {box-sizing: border-box;}
-            
-            input[type=text], select, textarea {
-              width: 100%;
-              padding: 12px;
-              border: 1px solid #ccc;
-              border-radius: 4px;
-              box-sizing: border-box;
-              margin-top: 6px;
-              margin-bottom: 16px;
-              resize: vertical;
-            }
-            
-            input[type=submit] {
-              background-color: #373737;
-              color: white;
-              padding: 12px 20px;
-              border: 3px #fff solid;
-              border-radius: 4px;
-              cursor: pointer;
-            }
-            
-            input[type=submit]:hover {
-              background-color: #1a87ee;
-            }
-            
-            .form {
-              border-radius: 5px;
-              background:#fafafa; 
-              padding: 20px;
-            }
-            </style>
+         
     
           <div class="form">
             <h3 class="sm-heading"><strong>If you’re interested to get in touch with me, just fill this form:</strong></h3>
@@ -605,5 +605,7 @@
       </footer>
     </div>
     <script src="./main.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+
   </body>
 </html>
