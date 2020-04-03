@@ -3,7 +3,7 @@
 // palette url: http://paletton.com/#uid=73e0w0kw0LvjNPepHMYK7zNJhps
 
 html {
-  font-size: 16px;
+  font-size: 1em;
   scroll-behavior: smooth;
   color: #000;
 }
@@ -432,7 +432,7 @@ nav {
           color: #fff;
         }
         &.selected {
-          border-bottom: 5px solid #3c71da;
+          border-bottom: 6px solid #3c71da;
         }
         a, a:link, a:visited, a:active, a:hover {
           letter-spacing: 1px;
