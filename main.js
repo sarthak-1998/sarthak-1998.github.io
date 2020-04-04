@@ -68,26 +68,13 @@ function cursorAnimation() {
 
 
 
-//   /* Get the text field */
-//   var copyText = document.getElementById("myInput");
-
-//   /* Select the text field */
-// console.log(copyText.textContent);
- 
-// var emailtext = copyText.textContent;
-//   //copyText.setSelectionRange(0, 99999); /*For mobile devices*/
-
-//   /* Copy the text inside the text field */
-//   document.execCommand('copy');
-
-//   /* Alert the copied text */
 
 
 $(document).ready(function() {
 	
 	// Add class to mailto link
 	// Needed to separate the disabling of the default action AND copy email to clipboard
-	$('a[href^=mailto]').addClass('mailto-link');
+	$('a[hreff^=mailto]').addClass('mailto-link');
 
 	var mailto = $('.mailto-link');
 	var messageCopy = 'Click to copy email address';
@@ -96,15 +83,18 @@ $(document).ready(function() {
 	mailto.append('<span class="mailto-message"></span>');
 	$('.mailto-message').append(messageCopy);
 	
-	// Disable default action (opening your email client. yuk.)
-	$('a[href^=mailto]').click(function() {
+  // Disable default action (opening your email client.)
+  
+	$('a[hreff^=mailto]').click(function() {
 		return false; 
 	})
-	
+  
+  
+
 	// On click, get href and remove 'mailto:'
 	// Store email address in a variable.
 	mailto.click(function() {
-		var href = $(this).attr('href');
+		var href = $(this).attr('hreff');
 		var email = href.replace('mailto:', '');
 		copyToClipboard(email);
 		$('.mailto-message').empty().append(messageSuccess);
