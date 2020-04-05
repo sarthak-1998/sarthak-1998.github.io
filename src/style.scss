@@ -580,6 +580,7 @@ section, footer {
   flex-basis: 100%;
   text-align: center;
   @media screen and (min-width: 560px) {
+    margin-top: 1%;
     max-width: 160px;
     flex-basis: 135px;
   }
@@ -592,6 +593,7 @@ section, footer {
   flex-basis: 0;
   text-align: center;
   @media screen and (min-width: 560px) {
+    text-align: left;
     
     padding-left: 1.5vw;
   }
