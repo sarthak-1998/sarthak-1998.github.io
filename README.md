@@ -7,4 +7,4 @@ https://sarthakj.me
 https://sarthak-1998.github.io/
 
 
-![PDF Resume](assets/Sarthak_Resume_U.pdf?raw=true "Title")
+![PDF Resume](assets/Sarthak_Resume.pdf?raw=true "Title")
