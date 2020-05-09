@@ -22,7 +22,7 @@ html, * {
 
 * {
   font-size: 1rem;
-  font-weight: 350;
+  font-weight: 450;
 }
 
 // Layout
@@ -316,10 +316,10 @@ header {
   z-index: 100;
   text-decoration: none;
   text-shadow: 0;
-  width: 2rem;
-  height: 2rem;
-  border-bottom: 8px solid #fff;
-  border-right: 8px solid #fff;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-bottom: 6.5px solid #fff;
+  border-right: 6.5px solid #fff;
   transform: translate(-50%, 0%) rotate(45deg);
   animation: fade_move_down 2s ease-in-out infinite;
 }
@@ -738,7 +738,7 @@ section, footer {
     margin-top: 8px;
     list-style: none;
     li:before {
-      content: "*";
+      content: "#";
       position: absolute;
       margin-left: -12px;
     }
