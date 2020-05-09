@@ -22,7 +22,7 @@ html, * {
 
 * {
   font-size: 1rem;
-  font-weight: 350;
+  font-weight: 450;
 }
 
 // Layout
@@ -738,7 +738,7 @@ section, footer {
     margin-top: 8px;
     list-style: none;
     li:before {
-      content: "*";
+      content: "#";
       position: absolute;
       margin-left: -12px;
     }
