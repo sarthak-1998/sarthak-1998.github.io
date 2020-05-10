@@ -21,7 +21,7 @@ html, * {
 }
 
 * {
-  font-size: 1.05rem;
+  font-size: 1.06rem;
   font-weight: 450;
 }
 
@@ -431,6 +431,7 @@ nav {
         &:hover, &:focus {
           background: #3c71da;
           color: #fff;
+          transform: scale(1.15); 
         }
         &.selected {
           border-bottom: 6px solid #3c71da;
@@ -811,8 +812,9 @@ section {
 footer {
   background:linear-gradient(180deg, #f7f7f7 0%, #f0f0f0 100%);
   margin-top: 44px;
+  text-align: center;
   p, a, a:link, a:visited {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     color: #666;
     line-height: 1.4;
   }
