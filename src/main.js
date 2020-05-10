@@ -42,7 +42,7 @@ const setSelectedNavLink = () => {
     visible: document.getElementById(v).offsetTop <= (document.documentElement.scrollTop + 0.34 * document.documentElement.clientHeight)
   }));
   sectionScrolls.sort((a, b) => b.visible - a.visible);
-  console.log(JSON.stringify(sectionScrolls));
+  //  console.log(JSON.stringify(sectionScrolls));
   document.querySelectorAll('nav ul li' , 'nav2 ul li').forEach(e => (e.classList.remove('selected')));
   document.getElementById(`${sectionScrolls[0].name}Link`).classList.add('selected');
 }

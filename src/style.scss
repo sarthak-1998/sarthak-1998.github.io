@@ -48,6 +48,7 @@ html, * {
 .col-centered {
   grid-column: span 12;
   max-width: 100%;
+  padding: 18px;
   @media screen and (min-width: 768px) {
     grid-column: 2/12;
   }
@@ -142,7 +143,7 @@ header {
   .separator {
     background: #fff;
     height: 2px;
-    width: 70px;
+    width: 50px;
     margin: auto;
     @media screen and (max-height: 500px) {
       display: none;
