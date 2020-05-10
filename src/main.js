@@ -1,3 +1,16 @@
+
+
+//Print this in console as well.
+
+console.log(`/*
+* Oh hello there, Mr. Hacker! , so you want to see some code? 
+* Sure thing, join me!
+* Drop an email sarthak.jain2404@gmail.com 
+* 
+*/
+`);
+
+
 let lastWindowWidth = document.documentElement.clientWidth;
 const scrollAndResizeHandler = (e) => {
   if ((lastWindowWidth >= 560 && document.documentElement.clientWidth < 560)
