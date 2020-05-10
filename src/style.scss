@@ -21,7 +21,7 @@ html, * {
 }
 
 * {
-  font-size: 1.06rem;
+  font-size: 1.04rem;
   font-weight: 450;
 }
 
@@ -634,10 +634,10 @@ section, footer {
   h3 {
     font-size: 1.5rem;
     small {
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       display: block;
       + small {
-        font-size: 0.75rem;
+        font-size: 0.85rem;
         color: #424242;
       }
     }
@@ -714,12 +714,10 @@ section, footer {
 
 
 
-
-
 .content-left-offset2 {
   
   margin-left: 64px;
-  margin-top: -2px;
+  margin-top: -4px;
   @media screen and (min-width: 560px) {
     margin-left: calc(0.75vw + 64px);
   }
@@ -741,7 +739,7 @@ section, footer {
     li:before {
       content: "#";
       position: absolute;
-      margin-left: -12px;
+      margin-left: -14px;
     }
   }
 }
