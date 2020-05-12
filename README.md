@@ -2,7 +2,7 @@
 
 > Mobile responsive online portfolio showcasing my work experience, education, projects and achievements along with mailing service and personal payments page.  Alternate Link -   https://sarthak-1998.github.io/
 
-                   Details of the Project
+                                                  Details of the Project
 
 <p align = "center">
   
@@ -78,7 +78,7 @@ You will need the following things properly installed on your computer.
 
 </p>
 
-                   Image of the Resume
+                                                       Image of the Resume
 
 ![Latex Resume](assets/Sarthak_Resume.jpg?raw=true "Title")
 
