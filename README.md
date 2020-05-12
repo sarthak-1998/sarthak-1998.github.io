@@ -1,10 +1,10 @@
 # Interactive Resume Website - **https://sarthakj.me**
 
-My mobile responsive online portfolio showcasing my work experience, education, projects and achievements along with mailing service and personal payments page.  Alternate Link -   https://sarthak-1998.github.io/
+> Mobile responsive online portfolio showcasing my work experience, education, projects and achievements along with mailing service and personal payments page.  Alternate Link -   https://sarthak-1998.github.io/
 
 
 
-<p align = "center">
+<div align = "center">
   
   
   ![GitHub followers](https://img.shields.io/github/followers/sarthak-1998?label=Follow&style=social)
@@ -18,8 +18,7 @@ My mobile responsive online portfolio showcasing my work experience, education, 
   ![Twitter Follow](https://img.shields.io/twitter/follow/sarcastic_sark?style=social)
 
 
-
-</p>
+</div >
 
 
 <p align= "center" >
