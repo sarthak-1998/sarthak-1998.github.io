@@ -1,16 +1,10 @@
-# Interactive Resume Website
+# Interactive Resume Website - **https://sarthakj.me**
 
-My mobile responsive online portfolio showcasing my work experience, education, projects and achievements along with mailing service and personal payments page. 
-
-<p align= "center" >
-
-## **https://sarthakj.me** </p>
-
-https://sarthak-1998.github.io/
+My mobile responsive online portfolio showcasing my work experience, education, projects and achievements along with mailing service and personal payments page.  Alternate Link -   https://sarthak-1998.github.io/
 
 
 
-<div align = "center">
+<p align = "center">
   
   
   ![GitHub followers](https://img.shields.io/github/followers/sarthak-1998?label=Follow&style=social)
@@ -25,7 +19,7 @@ https://sarthak-1998.github.io/
 
 
 
-</div>
+</p>
 
 
 <p align= "center" >
@@ -39,9 +33,9 @@ https://sarthak-1998.github.io/
 You will need the following things properly installed on your computer.
 
 * [Git](https://git-scm.com/)
-* [Node.js](https://nodejs.org/)
+* [Node.js](https://nodejs.org/) (with npm)
 * [Live server VS Code](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer/)
-* [ Browser (Google Chrome) ](https://google.com/chrome/)
+* [ Web Browser (Google Chrome) ](https://google.com/chrome/)
 
 
 ## Installation
