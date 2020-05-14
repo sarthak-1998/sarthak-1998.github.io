@@ -12,17 +12,9 @@
     <img src="https://img.shields.io/github/followers/sarthak-1998?label=Follow%20sarthak-1998&style=social"></img>
   </a>
   
-  <a href="https://github.com/sarthak-1998/sarthak-1998.github.io/fork">
-    <img src="https://img.shields.io/github/forks/sarthak-1998/sarthak-1998.github.io?label=Fork&style=social"></img>
-  </a>
-
-
-  <a href="https://github.com/sarthak-1998/sarthak-1998.github.io/">
-    <img src="https://img.shields.io/github/stars/sarthak-1998/sarthak-1998.github.io?style=social"></img>
-  </a>
 
   <a href="https://github.com/sarthak-1998/sarthak-1998.github.io/commits">
-    <img src="https://img.shields.io/github/Last-Commit/sarthak-1998/sarthak-1998.github.io"></img>
+    <img src="https://img.shields.io/github/last-commit/sarthak-1998/sarthak-1998.github.io"></img>
   </a>
 
 <a href="https://www.linkedin.com/in/sarthak-jain24apr98/" rel="nofollow noreferrer">
@@ -117,7 +109,22 @@ You will need the following things properly installed on your computer.
 <br/>
 
 
+
 <h3>It was nice to have you here, see you around !! </h3>
 
- <p align= "centre"> Developed with ❤️ by <a href="https://github.com/sarthak-1998" target="_blank">Sarthak Jain</a>  <br>
-            <strong> Copyright ©️ 2020 | All Rights Reserved </strong> </p>
+ <p align = "centre"> 
+
+   <a href="https://github.com/sarthak-1998/sarthak-1998.github.io/fork">
+    <img src="https://img.shields.io/github/forks/sarthak-1998/sarthak-1998.github.io?label=Fork&style=social"></img>
+  </a>
+
+
+  <a href="https://github.com/sarthak-1998/sarthak-1998.github.io/">
+    <img src="https://img.shields.io/github/stars/sarthak-1998/sarthak-1998.github.io?style=social"></img>
+  </a>
+ 
+ Developed with ❤️ by <a href="https://github.com/sarthak-1998" target="_blank">Sarthak Jain</a> 
+  <br>
+            <strong> Copyright ©️ 2020 | All Rights Reserved </strong> 
+            
+  </p>
