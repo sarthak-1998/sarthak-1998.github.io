@@ -6,6 +6,7 @@
 
 <p align = "center">
   
+
   
    <a href="https://github.com/sarthak-1998/">
     <img src="https://img.shields.io/github/followers/sarthak-1998?label=Follow%20sarthak-1998&style=social"></img>
@@ -21,16 +22,19 @@
   </a>
 
   <a href="https://github.com/sarthak-1998/sarthak-1998.github.io/commits">
-    <img src="https://img.shields.io/github/last-commit/sarthak-1998/sarthak-1998.github.io"></img>
+    <img src="https://img.shields.io/github/Last-Commit/sarthak-1998/sarthak-1998.github.io"></img>
   </a>
 
+<a href="https://www.linkedin.com/in/sarthak-jain24apr98/" rel="nofollow noreferrer">
+                <img style="padding-right: 10px;padding-left: 10px;" src="https://img.shields.io/badge/LinkedIn-Sarthak Jain-blue?style=social&logo=LinkedIn" alt="linkedin">
+              </img>
+              </a>
 
   <a href="https://twitter.com/intent/follow?original_referer=https%3A%2F%2Fpublish.twitter.com%2F&ref_src=twsrc%5Etfw&region=follow_link&screen_name=sarcastic_sark&tw_p=followbutton">
                 <img style="padding-right: 10px;padding-left: 10px;" alt="Twitter Follow" src="https://img.shields.io/twitter/follow/sarcastic_sark?style=social">
               </img>
               </a>
 </p >
-
 
 
 <p align = "center">
@@ -89,6 +93,9 @@ You will need the following things properly installed on your computer.
 <br/>
 <br/>
 <br/>
+
+
+  [//]: <> (This is also a comment.)
 
 
 ## Credits for the Project 
