@@ -3,9 +3,11 @@
 //Print this in console as well.
 
 console.log(`/*
-* Oh hello there, Mr. Hacker! , so you want to see some code? 
-* Sure thing, join me!
-* Drop an email sarthak.jain2404@gmail.com 
+* 
+* Oh hello there, Mr. Hacker !! , so you want to see some code? 
+* Sure thing,
+* Drop an email at dev@sarthakj.me
+* 
 * 
 */
 `);
