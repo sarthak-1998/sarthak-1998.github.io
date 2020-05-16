@@ -2,6 +2,8 @@
 
 > Mobile responsive online portfolio showcasing my work experience, education, projects and achievements along with mailing service and personal payments page.  Alternate Link -   https://sarthak-1998.github.io/
 
+Also you can try my custom 404 page - https://www.sarthakj.me/404 
+
                                                   Details of the Project
 
 <p align = "center">
