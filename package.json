@@ -1,10 +1,14 @@
 {
   "name": "sarthak_jain-portfolio",
-  "version": "1.1.8",
+  "version": "1.2.1",
   "description": "My personal portfolio and resume page.",
   "main": "/src/main.js",
   "scripts": {
     "build": "node ./src/build.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarthak-1998/sarthak-1998.github.io"
   },
   "author": "Sarthak Jain (SARK)",
   "license": "MIT",
