@@ -522,7 +522,7 @@ nav2 {
 
 // Content sections
 h2 {
-  font-size: 2.6rem;
+  font-size: 2.15rem;
   letter-spacing: -.1rem;
   margin-left: -4px;
   
@@ -536,6 +536,9 @@ h2 {
     position: relative;
     top: 12px;
     left: 4px;
+  }
+  @media screen and (min-width: 560px) {
+    font-size: 2.5rem;
   }
 }
 
@@ -633,18 +636,26 @@ section, footer {
     padding-left: 0.75vw;
   }
   h3 {
-    font-size: 1.5rem;
+    font-size: 1.15rem;
     small {
-      font-size: 1.15rem;
+      font-size: 1.0rem;
       display: block;
+      @media screen and (min-width: 560px) {
+        font-size: 1.25rem;
+    }
       + small {
-        font-size: 0.85rem;
+        font-size: 0.75rem;
         color: #424242;
+        @media screen and (min-width: 560px) {
+          font-size: 0.90rem;
+      }
       }
     }
+    @media screen and (min-width: 560px) {
+      font-size: 1.6rem;
   }
 }
-
+}
 .card {
   display: flex;
   flex-direction: column;
@@ -693,8 +704,8 @@ section, footer {
 }
 
 .content-left-offset {
-  margin-left: 64px;
-  margin-top: -24px;
+  margin-left: 60px;
+  margin-top: -14px;
   @media screen and (min-width: 560px) {
     margin-left: calc(0.75vw + 64px);
   }
@@ -703,12 +714,17 @@ section, footer {
   }
   ul {
     padding-left: 12px;
+    margin-left: -35px;
     margin-top: 8px;
     list-style: none;
+    @media screen and (min-width: 560px) {
+      margin-left: -10px;
+    }
+
     li:before {
       content: "-";
       position: absolute;
-      margin-left: -12px;
+      margin-left: -14px;
     }
   }
 }
@@ -717,8 +733,8 @@ section, footer {
 
 .content-left-offset2 {
   
-  margin-left: 64px;
-  margin-top: -4px;
+  margin-left: 30px;
+  margin-top: -8px;
   @media screen and (min-width: 560px) {
     margin-left: calc(0.75vw + 64px);
   }
@@ -740,7 +756,7 @@ section, footer {
     li:before {
       content: "#";
       position: absolute;
-      margin-left: -14px;
+      margin-left: -16px;
     }
   }
 }
