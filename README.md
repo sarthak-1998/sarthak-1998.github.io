@@ -32,7 +32,7 @@ Also you can try my custom 404 page - https://www.sarthakj.me/404
 
 
 <p align = "center">
-<a href="https://rzp.io/l/sarthak">
+<a href="https://www.payumoney.com/paybypayumoney/#/43456C05BDCB295D19CC4D8632845B0E">
     <img src="https://img.shields.io/badge/Donate%20Now-Support-blue?style=flat"></img>
   </a>
 </p>
