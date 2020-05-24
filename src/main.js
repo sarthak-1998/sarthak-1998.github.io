@@ -129,3 +129,26 @@ function copyToClipboard(text) {
     document.execCommand('copy');
     document.body.removeChild(dummy);
 }
+
+
+function ExpandShrink() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = " Read less"; 
+    moreText.style.display = "inline";
+  }
+}
+
+
+if(window.location.href == 'https://www.sarthakj.me/github')
+{
+    window.location.href="https://github.com/sarthak-1998";
+}

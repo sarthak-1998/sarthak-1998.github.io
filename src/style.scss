@@ -818,7 +818,9 @@ section {
 
 .well {
 	
-	background-color: #e1ecf4;
+  background-color: #e0ebf3;
+
+  cursor: pointer;
 	
 }
 
@@ -877,8 +879,8 @@ input[type=submit]:hover {
 }
 
 .form {
-  border-radius: 5px;
-  background:#fafafa; 
+  border-radius: 10px;
+  background:#f5f5f5; 
   padding: 20px;
 }
 
@@ -944,4 +946,29 @@ font-weight: bold;
 
 .st-label{
   line-height: 32px; 
+}
+
+#more {display: none;}
+
+#pay-btn {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  min-height: 38px;
+  padding: 15px;
+  line-height: 20px;
+  font-weight: 650;
+  font-size: 20px;
+  font-family: Lato, Muli, -apple-system, BlinkMacSystemFont, Arial,
+    sans-serif;
+  word-break: break-word;
+  border-radius: 10px;
+  text-align: center;
+  color: #ffff;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  text-decoration: none;
+  background-color: #528FF0;
+  width: 285px;
+  
 }
