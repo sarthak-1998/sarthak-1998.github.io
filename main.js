@@ -151,8 +151,8 @@ function ExpandShrink() {
 
 
 
-// function newRedirect() {
-//   if (window.location.href == 'https://www.sarthakj.me/github') {
-//     window.location.href = "https://github.com/sarthak-1998";
-//   }
-// }
+function newRedirect() {
+  if (window.location.href == 'https://www.sarthakj.me/github') {
+    window.location.href = "https://github.com/sarthak-1998";
+  }
+}
