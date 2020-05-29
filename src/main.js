@@ -13,12 +13,6 @@ console.log(`/*
 `);
 
 
-function newRedirect() {
-  if (window.location.href == 'https://www.sarthakj.me/github') {
-    window.location.href = "https://github.com/sarthak-1998";
-  }
-}
-
 let lastWindowWidth = document.documentElement.clientWidth;
 const scrollAndResizeHandler = (e) => {
   if ((lastWindowWidth >= 560 && document.documentElement.clientWidth < 560)
@@ -156,3 +150,9 @@ function ExpandShrink() {
 
 
 
+
+// function newRedirect() {
+//   if (window.location.href == 'https://www.sarthakj.me/github') {
+//     window.location.href = "https://github.com/sarthak-1998";
+//   }
+// }
