@@ -40,8 +40,9 @@ Also you can try my custom 404 page - https://www.sarthakj.me/404
 
 <br/>
 <br/>
+<br/>
 
-<p> ---------------------------------------------------------------------</p>
+<p> ----------------------------------------------------------------------</p>
 
 ## Steps to Use the Source-Code smoothly
 
