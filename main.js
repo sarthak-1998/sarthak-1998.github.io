@@ -1,6 +1,7 @@
 
 
 //Print this in console as well.
+//Print this in console as well.
 
 console.log(`/*
 * 
@@ -120,6 +121,7 @@ $(document).ready(function() {
 });
 
 // Grabbed this from Stack Overflow.
+// Hacktoberfest_Ayan
 // Copies the email variable to clipboard
 function copyToClipboard(text) {
     var dummy = document.createElement("input");
