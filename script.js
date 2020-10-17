@@ -7,7 +7,7 @@ var formatThousandsNoRounding = function(n, dp){
     (dp ? ',' + d + ( d.length < dp ? 
         ('00000').substr(0, dp - d.length):e):e);
 };
-
+//Hacktoberfest_Ayan_Jain
 var hasRun = false;
 
 inView('#countUp').on('enter', function() {
