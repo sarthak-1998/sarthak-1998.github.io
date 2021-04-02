@@ -1,6 +1,6 @@
 {
   "name": "sarthak_jain-portfolio",
-  "version": "1.2.1",
+  "version": "1.2.4",
   "description": "My personal portfolio and resume page.",
   "main": "/src/main.js",
   "scripts": {
@@ -13,8 +13,8 @@
   "author": "Sarthak Jain (SARK)",
   "license": "MIT",
   "dependencies": {
-    "node-sass": ">=4.13.1",
+    "lodash": "4.17.19",
     "minimist": "1.2.3",
-    "lodash": "4.17.19"
+    "node-sass": ">=4.13.1"
   }
 }
