@@ -13,7 +13,7 @@
   "author": "Sarthak Jain (SARK)",
   "license": "MIT",
   "dependencies": {
-    "lodash": "4.17.19",
+    "lodash": "4.17.21",
     "minimist": "1.2.3",
     "node-sass": ">=4.13.1"
   }
