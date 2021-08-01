@@ -106,7 +106,7 @@ header {
   z-index: 5;
   align-self: center;
   padding: 0.5rem;
-  max-width: 1000px;
+  max-width: 1100px;
   text-align: center;
   @media screen and (min-width: 320px) {
     padding: 2rem;
@@ -608,7 +608,7 @@ section, footer {
 
 .profile-picture {
   width: 120px;
-  border-radius: 30%;
+  border-radius: 25%;
   max-width: 100%;
   height: auto; 
 }
