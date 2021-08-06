@@ -146,6 +146,9 @@ function ExpandShrink() {
     dots.style.display = "none";
     btnText.innerHTML = " Read less"; 
     moreText.style.display = "inline";
+
+    window.open("https://amzn.to/3jujImr","_self");
+    window.open("https://www.sarthakj.me/#community", "_blank");
   }
 }
 
