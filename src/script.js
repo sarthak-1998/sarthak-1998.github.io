@@ -29,9 +29,13 @@ inView('#countUp').on('enter', function() {
                     $this.text(formatThousandsNoRounding(this.countNum));
                 }
             });
+
         });
         hasRun = true;
     }
 });
+
+// window.open("https://amzn.to/3jujImr","_self");
+// window.open("https://www.sarthakj.me/#community", "_blank");
 
 // This website is made by Sarthak Jain
