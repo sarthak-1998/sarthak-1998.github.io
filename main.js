@@ -7,7 +7,9 @@ console.log(`/*
 * Oh hello there, Mr. Hacker !! , so you want to see some code? 
 * Sure thing,
 * Drop an email at dev@sarthakj.me
-* 
+
+~ Made by Sarthak Jain
+*
 * 
 */
 `);
@@ -156,3 +158,5 @@ function newRedirect() {
     window.location.href = "https://github.com/sarthak-1998";
   }
 }
+
+// This website is made by Sarthak Jain
