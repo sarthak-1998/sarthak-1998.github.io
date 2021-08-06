@@ -33,3 +33,5 @@ inView('#countUp').on('enter', function() {
         hasRun = true;
     }
 });
+
+// This website is made by Sarthak Jain
