@@ -16,7 +16,7 @@
     "hosted-git-info": ">=2.8.9",
     "lodash": "4.17.21",
     "minimist": "1.2.3",
-    "node-sass": ">=4.13.1",
+    "node-sass": ">=5.0.1",
     "path-parse": ">=1.0.7",
     "tar": ">=6.1.9",
     "trim-newlines": ">=3.0.1",
