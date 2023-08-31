@@ -9,9 +9,9 @@ var formatThousandsNoRounding = function(n, dp){
 };
 
 var hasRun = false;
-var inView = false;
 
-inView('#countUp').on('enter', function() {
+
+document.addEventListener("DOMContentLoaded", function() {
     if (hasRun == false) {
         $('.number').each(function() {
             var $this = $(this),
