@@ -9,6 +9,7 @@ var formatThousandsNoRounding = function(n, dp){
 };
 
 var hasRun = false;
+var inView = false;
 
 inView('#countUp').on('enter', function() {
     if (hasRun == false) {
@@ -35,7 +36,6 @@ inView('#countUp').on('enter', function() {
     }
 });
 
-// window.open("https://amzn.to/3jujImr","_self");
-// window.open("https://www.sarthakj.me/#community", "_blank");
+
 
 // This website is made by Sarthak Jain
