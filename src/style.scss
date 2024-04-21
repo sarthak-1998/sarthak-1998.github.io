@@ -722,7 +722,7 @@ section, footer {
     }
 
     li:before {
-      content: "-";
+      content: "•";
       position: absolute;
       margin-left: -14px;
     }
@@ -754,7 +754,7 @@ section, footer {
     margin-top: 8px;
     list-style: none;
     li:before {
-      content: "#";
+      content: "‣";
       position: absolute;
       margin-left: -16px;
     }
