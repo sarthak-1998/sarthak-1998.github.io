@@ -48,9 +48,9 @@ Also you can try my custom 404 page - https://www.sarthakj.me/404
 You will need the following things properly installed on your computer.
 
 * [Git](https://git-scm.com/)
-* [Node.js](https://nodejs.org/) (with npm)
-* [Live server VS Code](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer/)
-* [ Web Browser (Google Chrome) ](https://google.com/chrome/)
+* [Node.js with npm](https://nodejs.org/) 
+* [VS Code with Live server extension ](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer/)
+* [ Web Browser (preferable Google Chrome) ](https://google.com/chrome/)
 
 
 ## Installation
@@ -64,7 +64,7 @@ You will need the following things properly installed on your computer.
 
 * `npm run build` 
 * Visit your app at [http://localhost:5500](http://localhost:5500).
-* Deploy !!
+* Deploy for FREE using Github pages!!
 
 <br/>
 

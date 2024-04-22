@@ -1,6 +1,6 @@
 {
   "name": "sarthak_jain_portfolio",
-  "version": "1.6.2",
+  "version": "1.6.4",
   "description": "My personal portfolio and resume",
   "main": "/src/main.js",
   "scripts": {
@@ -22,6 +22,6 @@
     "trim-newlines": ">=3.0.1",
     "y18n": ">=4.0.1",
     "json-schema": ">=0.4.0",
-    "http-cache-semantics":">=4.1.2"
+    "http-cache-semantics":">=4.1.1"
   }
 }
