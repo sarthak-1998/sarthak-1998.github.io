@@ -20,7 +20,8 @@
     "path-parse": ">=1.0.7",
     "tar": ">=6.1.9",
     "trim-newlines": ">=3.0.1",
-    "y18n": ">=4.0.1",
+    "y18n": 
+    ">=4.0.1",
     "json-schema": ">=0.4.0",
     "scss-tokenizer": ">=0.4.3",
     "minimatch": ">=3.0.8",
