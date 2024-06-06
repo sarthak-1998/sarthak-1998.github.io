@@ -1,6 +1,6 @@
 {
   "name": "sarthak_jain_portfolio",
-  "version": "1.6.7",
+  "version": "1.7",
   "description": "My personal portfolio and resume",
   "main": "/src/main.js",
   "scripts": {
