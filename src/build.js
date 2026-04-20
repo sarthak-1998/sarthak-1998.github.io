@@ -1,5 +1,5 @@
 const fs = require('fs');
-const sass = require('node-sass');
+const sass = require('sass');
 
 const filesToCopy = ['index.html', 'main.js', '404.html', 'script.js'];
 const sourceDir = './src';
@@ -11,26 +11,28 @@ filesToCopy.forEach(f => {
 });
 
 fs.readdir(`${sourceDir}/${assetsDir}`, (err, files) => {
+  if (err) {
+    console.log(`ERROR reading assets directory: ${err}`);
+    return;
+  }
+
   files.forEach(f => {
-    fs.copyFileSync(`${sourceDir}/${assetsDir}/${f}`, `./${targetDir}/${assetsDir}/${f}`);
+    fs.copyFileSync(
+      `${sourceDir}/${assetsDir}/${f}`,
+      `${targetDir}/${assetsDir}/${f}`
+    );
   });
 });
 
-sass.render(
-  {
-    file: `${sourceDir}/style.scss`,
-    outFile: `${targetDir}/style.css`,
-    outputStyle: 'compressed'
-  },
-  function (err, result) {
-    if (!err) {
-      fs.writeFileSync(`${targetDir}/style.css`, result.css, function (err2) {
-        if (!err2) console.log('SUCCESS: style.css file generated!');
-        else console.log(`ERROR: During style.css file generation- ${err2}`);
-      });
-    } else
-      console.log(`ERROR: During style.css file generation- ${err}`);
-  }
-);
+try {
+  const result = sass.compile(`${sourceDir}/style.scss`, {
+    style: 'compressed'
+  });
+
+  fs.writeFileSync(`${targetDir}/style.css`, result.css);
+  console.log('SUCCESS: style.css file generated!');
+} catch (err) {
+  console.log(`ERROR: During style.css file generation- ${err}`);
+}
 
 console.log('SUCCESS: Website Compiled !!');
